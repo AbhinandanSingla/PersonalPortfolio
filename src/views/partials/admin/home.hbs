@@ -1,0 +1,27 @@
+<section class="contacts">
+    <div class="max-width">
+        <table class="contactTable">
+            <tr class="contact-row-heading">
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Time</th>
+                <th>Delete</th>
+            </tr>
+            {{#each contact}}
+                <tr class="contact-row-data">
+                    <td>{{name}}</td>
+                    <td>{{subject}}</td>
+                    <td>{{email}}</td>
+                    <td>{{message}}</td>
+                    <td>{{time}}</td>
+                    <td><a class="contact-btn" aria-hidden= {{_id}}>
+                        <span><img src="../assets/cross.svg" alt=""></span>
+                    </a></td>
+
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="contacts">
+    <div class="max-width">
+        <table class="contactTable">
+            <tr class="contact-row-heading">
+                <th>Name</th>
+                <th>Title</th>
+                <th>Subject</th>
+                <th>Article</th>
+                <th>Time</th>
+                <th>Image</th>
+                <th>Delete</th>
+            </tr>
+
+            {{#each contact}}
+                <tr class="contact-row-data">
+                    <td>{{username}}</td>
+                    <td>{{title}}</td>
+                    <td>{{subject}}</td>
+                    <td>{{article}}</td>
+                    <td>{{time}}</td>
+                    <td class="blog-img">
+                        <img src="../assets/cc000117b757e5e8a90d5d3a3f342cda.webp" alt=""></td>
+                    <td>
+                        <a class="blog-update-btn" aria-hidden= {{_id}}>
+                            <span><img src="../assets/pencil.svg" alt=""></span>
+                        </a>
+                        <a class="blog-delete-btn" aria-hidden= {{_id}}>
+                            <span><img src="../assets/cross.svg" alt=""></span>
+                        </a>
+                    </td>
+
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</section>
