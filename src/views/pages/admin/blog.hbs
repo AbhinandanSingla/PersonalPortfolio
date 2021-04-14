@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Abhinandan Singla</title>
+    <link rel="stylesheet" href="../css/adminStyle.css">
+</head>
+<body>
+<section class="container">
+    <div class="navbar">
+        <div class="max-width">
+            <div class="logo">
+                S
+            </div>
+            <ul>
+                <li class="nav-btn">
+                    <a href="/">
+                        <img src="../assets/home_icon-icons.com_73532.png" alt="">
+
+                    </a>
+                </li>
+                <li class="nav-btn">
+                    <a href="/admin/contactus">
+                        <img src="../assets/contactcard_contactcard_tarjetadecontacto_4815.png" alt="">
+
+                    </a>
+                </li>
+                <li class="nav-btn">
+                    <a href="/admin/contact">
+                        <img src="../assets/books-couple_icon-icons.com_56313.svg" alt="">
+
+                    </a>
+                </li>
+            </ul>
+            <div class="bottomNav">
+                <figure>
+                    <img src="../assets/pc-computer-with-monitor_icon-icons.com_56249%20(1).svg" alt="">
+                    </h1>
+                </figure>
+                <figure>
+                    <img src="../assets/pc-computer-with-monitor_icon-icons.com_56249%20(1).svg" alt="">
+
+                </figure>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="home">
+        <div class="accountBar">
+            <div class="max-width">
+                <div class="title">Services</div>
+                <div class="accountHolder">
+                    <img src="../assets/location.png" alt="">
+                    <div class="accountName">
+                        Abhinandan Singla
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{>admin/blog}}
+    </div>
+
+</section>
+<script src="../jquery/jquery.js" type="text/javascript"></script>
+<script>
+    $('.blog-delete-btn').click(function () {
+        console.log($(this).attr('aria-hidden'))
+        const id = $(this).attr("aria-hidden")
+        const request = {
+            "url": `http://${window.location.host}/api/blog/${id}`,
+            "method": "DELETE"
+        };
+        if (confirm("Do you really want to delete this record?")) {
+            $.ajax(request).done(function (response) {
+                alert("Data Deleted Successfully!");
+                location.reload();
+            })
+        }
+    })
+</script>
+</body>
+</html>

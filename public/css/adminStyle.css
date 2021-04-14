@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&family=Karla:wght@300;400&family=Poppins:ital,wght@0,300;0,600;1,400&display=swap'); /*font-family: 'Acme', sans-serif;*/
+/*font-family: 'Bree Serif', serif;*/
+/*font-family: 'Karla', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #1976d2;
+    --second-color: #b1b493;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0 0;
+    grid-template-areas:
+    "navbar home home home"
+    "navbar home home home"
+    "navbar home home home";
+}
+
+.navbar {
+    position: fixed;
+    grid-area: navbar;
+}
+
+
+.navbar .logo {
+    font-size: 2rem;
+
+}
+
+.home {
+    grid-area: home;
+}
+
+.navbar .max-width {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    height: 100vh;
+    background: var(--main-color);
+    transition: all 2s linear;
+}
+
+.navbar .max-width img {
+    width: 2rem;
+}
+
+.navbar .max-width ul {
+    margin-top: 3rem;
+}
+
+.navbar .max-width ul .nav-btn {
+    display: block;
+    padding: 2rem;
+}
+
+.navbar .max-width .bottomNav figure {
+    padding: 1rem 2rem;
+}
+
+.hidden {
+    display: none;
+    transition: all 2s linear;
+}
+
+.navbar .max-width:hover .hidden {
+    display: block !important;
+}
+
+
+.home .max-width {
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .max-width .accountHolder img {
+    width: 6rem;
+}
+
+.contactTable {
+    table-layout: fixed;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.contactTable .contact-row-heading {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #90caf9;
+}
+
+.contact-row-heading th {
+    padding: 3rem;
+}
+
+.blog-delete-btn, .blog-update-btn, .contact-btn {
+    text-decoration: none;
+}
+
+.blog-delete-btn span img, .blog-update-btn span img, .contact-btn span img {
+    width: 2rem;
+    margin: 0 1rem;
+}
+
+.blog-img img {
+
+    width: 10rem;
+}
+
+.contactTable .contact-row-data {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.contactTable .contact-row-data td {
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
