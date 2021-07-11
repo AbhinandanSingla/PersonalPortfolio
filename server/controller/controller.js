@@ -102,11 +102,7 @@ exports.getTestimonies = (req, res) => {
     });
 }
 exports.getSkills = (req, res) => {
-    let addi = new skills({
-        name: 'html',
-        progress: 95
-    })
-    // addi.save(addi).then(data => console.log(data));
+
     skills.find().then(data => {
         if (!data) {
             res.status(404).send({message: "Not found contact with id "})
@@ -116,4 +112,27 @@ exports.getSkills = (req, res) => {
     }).catch(err => {
         res.status(500).send({message: "Error retrieving contact with id "})
     });
+}
+exports.addSkill = (req, res) => {
+    const name = req.body.name;
+    const percentage = req.body.percentage;
+    let addi = new skills({
+        name: name,
+        progress: percentage
+    })
+    addi.save(addi).then(data => res.send(data));
+}
+exports.deleteSkill = (req, res) => {
+    if (req.query.id) {
+        const id = req.query.id;
+        skills.findByIdAndDelete(id).then(data => {
+            console.log('skill deleted');
+            res.send('deleted')
+        })
+    } else {
+        skills.deleteMany().then(data => {
+            res.send('deleted')
+        })
+    }
+
 }

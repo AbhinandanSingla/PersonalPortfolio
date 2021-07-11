@@ -36,5 +36,7 @@ router.post('/api/blog/', controller.addBlog);
 router.delete('/api/blog/:id', controller.deleteBlog);
 router.get('/api/testimonies/', controller.getTestimonies);
 router.get('/api/skills/', controller.getSkills);
+router.post('/api/skills/', controller.addSkill);
+router.delete('/api/skills/', controller.deleteSkill);
 router.get('/api/img/', controller1.img);
 module.exports = router;

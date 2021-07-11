@@ -21,7 +21,7 @@ function scrollNavbar() {
 window.onscroll = () => scrollNavbar();
 const blogUrl = `http://${window.location.host}/api/blogs`;
 const testimoniesUrl = `http://${window.location.host}/api/testimonies`;
-let img = 'assets/cc000117b757e5e8a90d5d3a3f342cda.webp';
+let img = 'assets/personal-blog.jpg';
 const e = async () => {
     await $.get(blogUrl, (data, status) => {
         for (let i of data) {
@@ -38,13 +38,13 @@ const e = async () => {
     await $.get(testimoniesUrl, (data, status) => {
         console.log(data)
         for (let i of data) {
-            $('.blogContainer').append(`            <div class="card card1">
+            $('.blogContainer').append(`<div class="card card1">
                 <div class="sub-heading">
                     <span class="icon"></span>
                     ${i['review']}
                 </div>
                 <div class="bottom-carousel">
-                    <img alt="" src="assets/sport.png">
+                    <img alt="" src="assets/user.png">
                     <div class="bottom-container">
                         <div class="sub-heading">${i['username']}</div>
                     </div>

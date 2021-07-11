@@ -7,7 +7,7 @@ const router = require('../server/routes/router');
 
 const app = express();
 connection();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8002;
 
 const views_path = path.join(__dirname, '/views/pages');
 const public_path = path.join(__dirname, '../public');
