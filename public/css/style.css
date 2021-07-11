@@ -416,11 +416,10 @@ html {
     content: '\f2b6';
 }
 
+
 .servicesBox .serviceIconCircle .serviceCircle7:before {
     content: '\f7fa';
-}
-
-.servicesBox .serviceIconCircle .serviceCircle8:before {
+}.servicesBox .serviceIconCircle .serviceCircle8:before {
     content: '\f1d8';
 }
 
