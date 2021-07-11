@@ -394,19 +394,33 @@ html {
 
 .servicesBox .serviceIconCircle .serviceCircle1:before {
     content: '\f458';
-}.servicesBox .serviceIconCircle .serviceCircle2:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle2:before {
     content: '\f1c0';
-}.servicesBox .serviceIconCircle .serviceCircle3:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle3:before {
     content: '\f233';
-}.servicesBox .serviceIconCircle .serviceCircle4:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle4:before {
     content: '\f109';
-}.servicesBox .serviceIconCircle .serviceCircle5:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle5:before {
     content: '\f5d2';
-}.servicesBox .serviceIconCircle .serviceCircle6:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle6:before {
     content: '\f2b6';
-}.servicesBox .serviceIconCircle .serviceCircle7:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle7:before {
     content: '\f7fa';
-}.servicesBox .serviceIconCircle .serviceCircle8:before {
+}
+
+.servicesBox .serviceIconCircle .serviceCircle8:before {
     content: '\f1d8';
 }
 
@@ -862,7 +876,13 @@ html {
 
 @media (max-width: 700px) {
     .mobileBtn {
+        cursor: pointer;
+
         display: block;
+    }
+
+    .mobileBtn i {
+        font-size: 2rem;
     }
 
     .mobile-nav {
